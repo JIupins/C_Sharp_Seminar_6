@@ -5,24 +5,24 @@ Console.Clear();
 
 double[] CreateArrayNumbers(string letter)
 {
-    double[] ary = new double[2];
+    double[] array = new double[2];
 
-    for (int i = 0; i < ary.Length; i++)
+    for (int i = 0; i < array.Length; i++)
     {
         Console.Write($"Введите значение {letter + (i + 1)}: ");
-        ary[i] = Convert.ToDouble(Console.ReadLine());
+        array[i] = Convert.ToDouble(Console.ReadLine());
     }
 
-    return ary;
+    return array;
 }
 
-void FindCoordinatsPointCross(double[] firstArr, double[] secondArr)
+void FindCoordinatsPointCross(double[] firstCol, double[] secondCol)
 {
-    double x = (firstArr[1] - firstArr[0]) / (secondArr[0] - secondArr[1]);
-    double y = secondArr[0] * x + firstArr[0];
+    double x = (firstCol[1] - firstCol[0]) / (secondCol[0] - secondCol[1]);
+    double y = secondCol[0] * x + firstCol[0];
 
     Console.WriteLine($"Точка пересечения прямых заданных уравнениями y = k1 * x + b1, y = k2 * x + b2, при условии что: " +
-                      $"b1 = {firstArr[0]}, b2 = {firstArr[1]}, k1 = {secondArr[0]}, k2= {secondArr[1]}, равна: x = {x}; y = {y}.");
+                      $"b1 = {firstCol[0]}, b2 = {firstCol[1]}, k1 = {secondCol[0]}, k2= {secondCol[1]}, равна: x = {x}; y = {y}.");
 }
 
 double[] firstCollection = new double[2];
