@@ -32,6 +32,4 @@ int number = Convert.ToInt32(Console.ReadLine());
 
 double[] array = new double[number];
 
-array = CreateArray(number);
-
-QuantityPositiveNumbers(array);
+QuantityPositiveNumbers(array = CreateArray(number));
